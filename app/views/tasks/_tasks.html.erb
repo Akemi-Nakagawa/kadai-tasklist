@@ -1,0 +1,10 @@
+<ul class="list-unstyled">
+    <% tasks.each do |task| %>
+        <div class="row">
+            <div class="col-sm-2"><%= link_to task.id, task %></div>
+            <div class="col-sm-6"><%= task.content %></div>
+            <div class="col-sm-4"><%= task.status %></div>
+        </div>
+    <% end %>
+    <%= paginate tasks %>
+</ul>
